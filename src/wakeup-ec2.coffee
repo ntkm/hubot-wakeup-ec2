@@ -19,8 +19,16 @@ moment = require('moment')
 async = require('async')
 
 AWS = require('aws-sdk')
-AWS.config.loadFromPath(process.env.AWS_SECRET_PATH || "#{process.env.HOME}/secrets/credentials.json")
-AWS.config.region = process.env.AWS_REGION || REGION
+
+if process.env.AWS_ACCESS_KEY_ID? and process.env.AWS_SECRET_ACCESS_KEY?
+  AWS.config.update({
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
+  })
+else
+  AWS.config.loadFromPath(process.env.AWS_SECRET_PATH || "#{process.env.HOME}/secrets/credentials.json")
+
+AWS.config.update({region: process.env.AWS_REGION || REGION})
 
 handleInstance = (ec2, instance, toHandle) ->
   params = { InstanceIds: [instance.InstanceId] }
