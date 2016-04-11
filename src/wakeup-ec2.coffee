@@ -15,7 +15,6 @@
 #   ntkm <aui.tkm@gmail.com>
 
 REGION = 'ap-northeast-1'
-moment = require('moment')
 async = require('async')
 
 AWS = require('aws-sdk')

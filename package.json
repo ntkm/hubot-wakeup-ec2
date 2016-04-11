@@ -1,7 +1,7 @@
 {
   "name": "hubot-wakeup-ec2",
   "description": "Start or Stop your EC2 instance",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "ntkm <aui.tkm@gmail.com>",
   "license": "MIT",
   "keywords": "hubot, hubot-scripts, aws, ec2",
@@ -14,8 +14,7 @@
   },
   "dependencies": {
     "async": "^1.5.2",
-    "aws-sdk": "^2.3.2",
-    "moment": "^2.12.0"
+    "aws-sdk": "^2.3.2"
   },
   "peerDependencies": {
     "hubot": "2.x"
