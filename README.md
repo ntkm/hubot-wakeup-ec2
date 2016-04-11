@@ -21,7 +21,7 @@ Then add **hubot-wakeup-ec2** to your `external-scripts.json`:
 ## Sample Interaction
 
 ```
-you>> hubot start instance tag-name=tag-value
+you>> hubot start instance tag-key=tag-value
 hubot>> starting your EC2 Instances.
 hubot>> Instance: id = xxxxxx
 hubot>> started instance: instanceId = xxxxxxx

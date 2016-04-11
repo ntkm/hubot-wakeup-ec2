@@ -5,8 +5,8 @@
 #   LIST_OF_ENV_VARS_TO_SET
 #
 # Commands:
-#   hubot hello - <what the respond trigger does>
-#   orly - <what the hear trigger does>
+#   hubot start instance TagKey=TagValue - <Start your instances where TagKey = TagValue>
+#   hubot stop instance TagKey=TagValue - <Stop your instances where TagKey = TagValue>
 #
 # Notes:
 #   <optional notes required for the script>
@@ -45,7 +45,7 @@ handleInstance = (ec2, instance, toHandle) ->
 module.exports = (robot) ->
   robot.respond /(start|stop) instance ([^ =]+)?=([^ =]+)?$/i, (res) ->
     toHandle = res.match[1]
-    tagName = res.match[2]
+    tagKey = res.match[2]
     tagValue = res.match[3]
 
     res.send "#{toHandle}ing your EC2 Instances."
@@ -55,7 +55,7 @@ module.exports = (robot) ->
       Filters: [
         {
           Name: 'tag-key',
-          Values: [tagName]
+          Values: [tagKey]
         },
         {
           Name: 'tag-value',

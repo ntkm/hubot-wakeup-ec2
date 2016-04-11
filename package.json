@@ -1,7 +1,7 @@
 {
   "name": "hubot-wakeup-ec2",
   "description": "Start or Stop your EC2 instance",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "ntkm <aui.tkm@gmail.com>",
   "license": "MIT",
   "keywords": "hubot, hubot-scripts, aws, ec2",
