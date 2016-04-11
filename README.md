@@ -1,6 +1,6 @@
 # hubot-wakeup-ec2
 
-Start your EC2 instance
+Start/Stop your EC2 instance
 
 See [`src/wakeup-ec2.coffee`](src/wakeup-ec2.coffee) for full documentation.
 
@@ -21,6 +21,9 @@ Then add **hubot-wakeup-ec2** to your `external-scripts.json`:
 ## Sample Interaction
 
 ```
-uyou>> hubot start instance tag-name=tag-value
-hubot>> started instance (instanceId = xxxxxxx)
+you>> hubot start instance tag-name=tag-value
+hubot>> starting your EC2 Instances.
+hubot>> Instance: id = xxxxxx
+hubot>> started instance: instanceId = xxxxxxx
+hubot>> All Done!!
 ```
